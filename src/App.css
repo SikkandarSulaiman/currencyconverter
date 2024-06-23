@@ -36,3 +36,83 @@
     transform: rotate(360deg);
   }
 }
+
+select {
+  height: 66px;
+  border: none;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-left: 5px;
+  background-color: cornsilk;
+  color: black;
+  /* position: fixed; */
+  appearance: none;
+  width: 10%;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+input[type="number"] {
+  text-align: right;
+  padding-right: 25px;
+  background-color: cornsilk;
+  color: black;
+  border: none;
+  height: 64px;
+  width: 30%;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  font-size: x-large;
+  font-weight: bold;
+  /* overflow-x: scroll; */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:focus, select:focus {
+  outline: none;
+  /* box-shadow: 20px 0 10px 0 black; */
+  /* transition: box-shadow 0.8s ease-in-out; */
+}
+
+body {
+  /* background-color: aqua; */
+  overflow-y: hidden;
+  background: rgb(2,0,36);
+  background: linear-gradient(25deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 50%, rgba(0,212,255,1) 85%);
+}
+
+#root {
+  /* background-color: limegreen; */
+  text-align: center;
+  height: 100vh;
+}
+
+#currency-work-area {
+  /* background-color: violet; */
+  position: relative;
+  top: 25%;
+}
+
+.currency-meter {
+  background-color: transparent;
+  position: relative;
+}
+
+#input-currency-meter {
+  padding-bottom: 12px;
+}
+
+#output-currency-meter {
+  padding-top: 12px;
+}
+
+/* #output-currency-meter > select {
+  border-top: 1px solid limegreen;
+  border-bottom: 1px solid cornsilk;
+  height: 48px;
+} */

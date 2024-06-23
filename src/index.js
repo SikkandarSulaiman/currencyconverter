@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
+import "./App.css";
 
 const CurrencyMeter = ({
     side,
@@ -9,8 +10,10 @@ const CurrencyMeter = ({
     currencyChange,
 }) => {
     const select_tag_name = `${side}-currency-selection`;
+    const main_div_id = `${side}-currency-meter`;
     return (
-        <>
+        <div id={main_div_id} className="currency-meter">
+            <input type="number" value={value} onChange={valueChange} />
             <select name={select_tag_name} onChange={currencyChange}>
                 {Object.entries(currencyList).map(
                     ([currency_name, val_in_INR], i) => {
@@ -22,8 +25,7 @@ const CurrencyMeter = ({
                     }
                 )}
             </select>
-            <input type="number" value={value} onChange={valueChange} />
-        </>
+        </div>
     );
 };
 
@@ -68,7 +70,7 @@ function App() {
     };
 
     return (
-        <div>
+        <div id="currency-work-area">
             <CurrencyMeter
                 side="input"
                 currencyList={currs}
